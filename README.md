@@ -1,108 +1,81 @@
-# tmux-tokyonight-theme
+# Tokyonight theme for TMUX
 
 ![tmux-tokyonight-theme Preview](https://raw.githubusercontent.com/jeircul/tmux-tokyonight-theme/master/theme.png)
 
-### Set Options
+Installing Via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
+-----------------------------------------------------------------------
 
-**!** Set the following options in your `.tmux.conf`
+1.  Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-#### widgets
+    ``` tmux
+    set -g @plugin 'jeircul/tmux-tokyonight-theme'
+    ```
+2.  Use <kbd>prefix</kbd>–<kbd>I</kbd> to install `tmux-tokyonight-theme`.
+3.  When you want to update `tmux-tokyonight-theme` use <kbd>prefix</kbd>–<kbd>U</kbd>.
 
-Widgets can be controlled by setting `@tokyonight_widgets`, for example:
 
+#### Manual Installation
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/jeircul/tmux-tokyonight-theme ~/.config/tmux/plugins/
+   ```
+2. Add this line to the bottom of `.tmux.conf`:
+   ```tmux
+   run-shell ~/.config/tmux/plugins/tmux-tokyonight-theme/tmux-tokyonight-theme.tmux
+   ```
+3. Use <kbd>prefix</kbd>–<kbd>R</kbd> to Reload TMUX environment
+
+
+Set Options
+-----------
+
+#### `@tokyonight_widgets`
+- example:
 ```
 set -g @tokyonight_widgets "#(date +%s)"
 ```
+- Once set, these widgets will show on the right.
+- **default**: empty string.
 
-Once set, these widgets will show on the right.
-
-**default**: empty string.
-
-#### Time format
-
-Time format can be controlled by setting `@tokyonight_time_format`, for example:
-
+#### `@tokyonight_time_format`
+- example:
 ```
 set -g @tokyonight_time_format "%I:%M %p"
 ```
+- `%I` - The hour as a decimal number using a 12-hour clock  
+- `%M` - The minute as a decimal number
+- `%p` -  Either "AM" or "PM" according to the given time value.
+- **default**: `%R` - The time in 24-hour notation (%H:%M).
 
-`%I` - The hour as a decimal number using a 12-hour clock  
-`%M` - The minute as a decimal number  
-`%p` -  Either "AM" or "PM" according to the given time value.
+**Note**: These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
 
-**default**: `%R` - The time in 24-hour notation (%H:%M).
-
-These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
-
-#### Date format
-
-Date format can be controlled by setting `@tokyonight_date_format`, for example:
-
+#### `@tokyonight_date_format`
+- example:
 ```
 set -g @tokyonight_date_format "%D"
 ```
+- `%D` - Equivalent to %m/%d/%y (American format).   
+- `%m` - The month as a decimal number.  
+- `%d` - The day of the month as a decimal number  
+- `%y` - The year as a decimal number without the century.  
+- **default**: `%d/%m/%Y` - The date in non-American format.
 
-`%D` - Equivalent to %m/%d/%y (American format).   
-`%m` - The month as a decimal number.  
-`%d` - The day of the month as a decimal number  
-`%y` - The year as a decimal number without the century.  
+**Note**: These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
 
-**default**: `%d/%m/%Y` - The date in non-American format.
-
-These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
-
-### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
-
-Add plugin to the list of TPM plugins in `.tmux.conf`:
-
-```
-set -g @plugin 'jeircul/tmux-tokyonight-theme'
-```
-
-Hit `prefix + I` to fetch the plugin and source it.
-
-### Manual Installation
-
-Clone the repo:
-
-```
-$ git clone https://github.com/jeircul/tmux-tokyonight-theme /a/path/you/choose
-```
-
-Add this line to the bottom of `.tmux.conf`:
-
-```
-run-shell /a/path/you/choose tmux-tokyonight-theme.tmux
-```
-
-Reload TMUX environment (type this in terminal)
-```
-$ tmux source-file ~/.tmux.conf
-```
 
 ## Issues
 
-### Symbols are missing
+- Symbols are missing
+   - The theme requires Powerline symbols exist and set on your system. Follow [these instructions](https://github.com/powerline/fonts) to install them, then update your terminal fonts to use them.
 
-   The theme requires Powerline symbols exist and set on your system. Follow [these instructions](https://github.com/powerline/fonts) to install them, then update your terminal fonts to use them.
+- Symbols are corrupted
+   - Patched Powerline fonts aren't picked up when `$LANG` isn't set to `en_US`. You can change the default locale settings at `/etc/default/locale`.
 
-### Symbols are corrupted
-
-   Patched Powerline fonts aren't picked up when `$LANG` isn't set to `en_US`.  
-   You can change the default locale settings at `/etc/default/locale`.
-
-   
-### Widgets not working
-
-   Make sure that you put the `set -g @plugin 'jeircul/tmux-tokyonight-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
-
-### True Color
-
-   tmux version <= 2.3, don't support true color in the status line.
-   [Support has been added](https://github.com/tmux/tmux/issues/490), and will probably ship in the next release.
-   You can compile tmux and enjoy True Color right away!
-
-   Make sure TrueColor is enabled and working. follow [these instructions](https://sunaku.github.io/tmux-24bit-color.html#usage) to do so.
+- Widgets not working
+   - Make sure that you put the `set -g @plugin 'jeircul/tmux-tokyonight-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
+- True Color
+   - Make sure TrueColor is enabled and working. follow [these instructions](https://sunaku.github.io/tmux-24bit-color.html#usage) to do so.
 
 ### License
 
