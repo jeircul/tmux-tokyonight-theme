@@ -1,5 +1,7 @@
 # tmux-tokyonight-theme
 
+![tmux-tokyonight-theme Preview](https://raw.githubusercontent.com/jeircul/tmux-tokyonight-theme/master/theme.png)
+
 ### Set Options
 
 **!** Set the following options in your `.tmux.conf`
