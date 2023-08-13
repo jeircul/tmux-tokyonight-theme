@@ -13,8 +13,8 @@ Installing Via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
 2.  Use <kbd>prefix</kbd>–<kbd>I</kbd> to install `tmux-tokyonight-theme`.
 3.  When you want to update `tmux-tokyonight-theme` use <kbd>prefix</kbd>–<kbd>U</kbd>.
 
-
-#### Manual Installation
+<details>
+<summary>Manual Installation</summary>
 
 1. Clone the repo:
    ```sh
@@ -25,21 +25,23 @@ Installing Via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
    run-shell ~/.config/tmux/plugins/tmux-tokyonight-theme/tmux-tokyonight-theme.tmux
    ```
 3. Use <kbd>prefix</kbd>–<kbd>R</kbd> to Reload TMUX environment
-
+</details>
 
 Set Options
 -----------
-
-#### `@tokyonight_widgets`
-- example:
+<details>
+<summary>@tokyonight_widgets</summary>
+    
 ```
 set -g @tokyonight_widgets "#(date +%s)"
 ```
 - Once set, these widgets will show on the right.
 - **default**: empty string.
+</details>
 
-#### `@tokyonight_time_format`
-- example:
+<details>
+<summary>@tokyonight_time_format</summary>
+
 ```
 set -g @tokyonight_time_format "%I:%M %p"
 ```
@@ -48,10 +50,14 @@ set -g @tokyonight_time_format "%I:%M %p"
 - `%p` -  Either "AM" or "PM" according to the given time value.
 - **default**: `%R` - The time in 24-hour notation (%H:%M).
 
-**Note**: These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
+> **Note**
+> These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
 
-#### `@tokyonight_date_format`
-- example:
+</details>
+
+<details>
+<summary>@tokyonight_date_format</summary>
+
 ```
 set -g @tokyonight_date_format "%D"
 ```
@@ -61,21 +67,36 @@ set -g @tokyonight_date_format "%D"
 - `%y` - The year as a decimal number without the century.  
 - **default**: `%d/%m/%Y` - The date in non-American format.
 
-**Note**: These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
+> **Note**
+> These modifiers were taken from from [strftime manpage](http://man7.org/linux/man-pages/man3/strftime.3.html).
 
+</details>
 
 ## Issues
 
-- Symbols are missing
-   - The theme requires Powerline symbols exist and set on your system. Follow [these instructions](https://github.com/powerline/fonts) to install them, then update your terminal fonts to use them.
+<details>
+<summary>Symbols are missing</summary>
 
-- Symbols are corrupted
-   - Patched Powerline fonts aren't picked up when `$LANG` isn't set to `en_US`. You can change the default locale settings at `/etc/default/locale`.
+* The theme requires Powerline symbols exist and set on your system. Follow [these instructions](https://github.com/powerline/fonts) to install them, then update your terminal fonts to use them.
+</details>
 
-- Widgets not working
-   - Make sure that you put the `set -g @plugin 'jeircul/tmux-tokyonight-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
-- True Color
-   - Make sure TrueColor is enabled and working. follow [these instructions](https://sunaku.github.io/tmux-24bit-color.html#usage) to do so.
+<details>
+<summary>Symbols are corrupted</summary>
+
+- Patched Powerline fonts aren't picked up when `$LANG` isn't set to `en_US`. You can change the default locale settings at `/etc/default/locale`.
+</details>
+
+<details>
+<summary>Widgets not working</summary>
+    
+- Make sure that you put the `set -g @plugin 'jeircul/tmux-tokyonight-theme'` before other scripts that alter the status line, or they won't be able to pickup the plugin's changes.
+</details>
+
+<details>
+<summary>True Color</summary>
+    
+- Make sure TrueColor is enabled and working. follow [these instructions](https://sunaku.github.io/tmux-24bit-color.html#usage) to do so.
+</details>
 
 ### License
 
