@@ -1,9 +1,8 @@
-# Tokyonight theme for TMUX
+# TMUX - Tokyonight theme  
 
 ![tmux-tokyonight-theme Preview](https://raw.githubusercontent.com/jeircul/tmux-tokyonight-theme/master/theme.png)
 
-Installing Via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
------------------------------------------------------------------------
+## 📦 Installation via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
 
 1.  Add plugin to the list of TPM plugins in `.tmux.conf`:
 
@@ -14,7 +13,7 @@ Installing Via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
 3.  When you want to update `tmux-tokyonight-theme` use <kbd>prefix</kbd>–<kbd>U</kbd>.
 
 <details>
-<summary>Manual Installation</summary>
+<summary>📦 Manual Installation</summary>
 
 1. Clone the repo:
    ```sh
@@ -27,8 +26,8 @@ Installing Via [TPM](https://github.com/tmux-plugins/tpm) (recommended)
 3. Use <kbd>prefix</kbd>–<kbd>R</kbd> to Reload TMUX environment
 </details>
 
-Set Options
------------
+## ⚙️ Configuration
+
 <details>
 <summary>@tokyonight_widgets</summary>
     
@@ -72,7 +71,7 @@ set -g @tokyonight_date_format "%D"
 
 </details>
 
-## Issues
+## 🛠️ Issues
 
 <details>
 <summary>Symbols are missing</summary>
