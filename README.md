@@ -1,3 +1,5 @@
+![Shellcheck](https://github.com/jeircul/tmux-tokyonight-theme/actions/workflows/shellcheck.yml/badge.svg)
+
 # TMUX - Tokyonight theme  
 
 ![tmux-tokyonight-theme Preview](https://raw.githubusercontent.com/jeircul/tmux-tokyonight-theme/master/theme.png)
