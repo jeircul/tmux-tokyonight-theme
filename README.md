@@ -29,7 +29,7 @@
 ## ⚙️ Configuration
 
 <details>
-<summary>@tokyonight_widgets</summary>
+<summary>Widgets</summary>
     
 ```
 set -g @tokyonight_widgets "#(date +%s)"
@@ -39,7 +39,7 @@ set -g @tokyonight_widgets "#(date +%s)"
 </details>
 
 <details>
-<summary>@tokyonight_time_format</summary>
+<summary>Time format</summary>
 
 ```
 set -g @tokyonight_time_format "%I:%M %p"
@@ -55,7 +55,7 @@ set -g @tokyonight_time_format "%I:%M %p"
 </details>
 
 <details>
-<summary>@tokyonight_date_format</summary>
+<summary>Date format</summary>
 
 ```
 set -g @tokyonight_date_format "%D"
