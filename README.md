@@ -99,6 +99,6 @@ set -g @tokyonight_date_format "%D"
 - Make sure TrueColor is enabled and working. follow [these instructions](https://sunaku.github.io/tmux-24bit-color.html#usage) to do so.
 </details>
 
-### License
+## ⚖ License
 
 [MIT](LICENSE)
